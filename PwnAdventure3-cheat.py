@@ -98,7 +98,7 @@ script = session.create_script("""
                 }
             });
 
-        // Mana cheat
+        // Mana cheat - (Update 08/JUL/2018: It's fake. Only updates the mana value in the HUD)
         var getMana = Module.findExportByName("libGameLogic.so", "_ZN6Player7GetManaEv");
         console.log("Player::GetMana at address: " + getMana);
         Interceptor.attach(getMana,
