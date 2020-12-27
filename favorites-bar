@@ -1,4 +1,4 @@
-locburp=$(sed -e "s/burp/$(locate BurpSuiteCommunity.desktop | grep gnome| cut -d"/" -f6)/")
-orig=gsettings set org.gnome.shell favorite-apps "['firefox.desktop', 'org.gnome.Nautilus.desktop', 'terminator.desktop', 'burp']"
-final=$(echo $orig |sed -e "s/burp/$locburp/")
-$final
+locburp=$(locate BurpSuiteCommunity.desktop | grep gnome| cut -d"/" -f6)
+orig="gsettings set org.gnome.shell favorite-apps \"['firefox.desktop', 'org.gnome.Nautilus.desktop', 'terminator.desktop', 'burp']\""
+final=$(echo $orig | sed -e "s/burp/$locburp/")
+echo $final | sh
