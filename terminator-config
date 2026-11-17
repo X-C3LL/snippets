@@ -1,9 +1,19 @@
+[global_config]
+[keybindings]
 [profiles]
   [[default]]
-    borderless = True
-    scrollbar_position = hidden
-    show_titlebar = false
     background_color = "#1b1d1e"
-    cursor_color = "#fcef0c"
     foreground_color = "#6f6f6f"
-    palette = "#111217:#928374:#928374:#c74047:#3d2529:#747271:#c74047:#c6c5bf:#505354:#633741:#c74047:#c74047:#c74047:#9a9a9d:#414645:#dadbd6"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#111217:#928374:#928374:#c74047:#e66100:#747271:#c74047:#c6c5bf:#505354:#633741:#c74047:#c74047:#c74047:#9a9a9d:#414645:#dadbd6"
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
+
